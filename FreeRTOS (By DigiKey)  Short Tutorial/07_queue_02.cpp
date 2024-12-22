@@ -1,3 +1,13 @@
+/**
+ * Solution to 05 - Queue Challenge
+ * 
+ * One task performs basic echo on Serial. If it sees "delay" followed by a
+ * number, it sends the number (in a queue) to the second task. If it receives
+ * a message in a second queue, it prints it to the console. The second task
+ * blinks an LED. When it gets a message from the first queue (number), it
+ * updates the blink delay to that number. Whenever the LED blinks 100 times,
+ * the second task sends a message to the first task to be printed.
+ */
 // Use only core 1 for demo purposes
 #if CONFIG_FREERTOS_UNICORE
   static const BaseType_t app_cpu = 0;

@@ -5,8 +5,8 @@
 #include "driver/gpio.h"
 
 #define ESP_INTR_FLAG_DEFAULT 0
-#define CONFIG_LED_PIN 2
-#define CONFIG_BUTTON_PIN 0
+#define CONFIG_LED_PIN        2
+#define CONFIG_BUTTON_PIN     0
 
 TaskHandle_t myTask1Handle = NULL;
 TaskHandle_t myTask2Handle = NULL;
@@ -71,7 +71,7 @@ void app_main(){
   
   // set the correct direction
   gpio_set_direction(CONFIG_BUTTON_PIN, GPIO_MODE_INPUT);
-    gpio_set_direction(CONFIG_LED_PIN, GPIO_MODE_OUTPUT);
+  gpio_set_direction(CONFIG_LED_PIN, GPIO_MODE_OUTPUT);
   
   // enable interrupt on falling (1->0) edge for button pin
   gpio_set_intr_type(CONFIG_BUTTON_PIN, GPIO_INTR_NEGEDGE);

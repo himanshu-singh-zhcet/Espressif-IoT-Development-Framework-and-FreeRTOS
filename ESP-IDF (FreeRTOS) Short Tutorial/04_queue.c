@@ -27,7 +27,7 @@ void task1(void *args){
 }
 
 void task2(void *args){
-	char rxbuff[]
+	char rxbuff[];
 	while(1){
 		if(xQueueReceive(queue1, &(rxbuff) , (TickType_t)5 )){ 
             printf("got a data from queue!  ===  %s \n",rxbuff);

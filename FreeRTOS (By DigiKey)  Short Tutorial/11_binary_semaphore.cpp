@@ -1,5 +1,5 @@
 // You'll likely need this on vanilla FreeRTOS
-//#include semphr.h
+//#include "semphr.h"
 
 // Use only core 1 for demo purposes
 #if CONFIG_FREERTOS_UNICORE

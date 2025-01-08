@@ -23,6 +23,9 @@
 //Value Computed by CMake
 01_hello_world_SOURCE_DIR:STATIC=D:/ESP-IDF & FreeRTOS/ESP-IDF (By Innovate Yourself) Short Tutorial/01_hello_world
 
+//No help, variable specified on the command line.
+CCACHE_ENABLE:UNINITIALIZED=0
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-addr2line.exe
 
@@ -356,10 +359,10 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=C:/Users/hansh/esp/v5.3.2/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
-PYTHON_DEPS_CHECKED:UNINITIALIZED=1
+PYTHON:UNINITIALIZED=C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe
 
 //No help, variable specified on the command line.
-SDKCONFIG:UNINITIALIZED=d:\ESP-IDF & FreeRTOS\ESP-IDF (By Innovate Yourself) Short Tutorial\01_hello_world\sdkconfig
+PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //Allow unsafe builds. These builds ARE NOT SECURE.
 UNSAFE_BUILD:BOOL=OFF

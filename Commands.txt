@@ -1,0 +1,103 @@
+/******* esp-idf Commands ******/
+./install.sh
+. ./export.sh
+cd to the hello world cd examples/get-started/blink
+
+idf.py fullclean   
+idf.py --version   // command for checking esp-idf version 
+idf.py build       // command for build or compile the project
+idf.py set-target esp32-c3
+idf.py menuconfig 
+idf.py -p /dev/ttyUSB0 flash
+idf.py monitor
+idf.py build flash monitor
+idf.py add-dependency espressif/expat
+esptool.py read_mac
+esptool.py --chip esp32 -p <USB-to-Serial Port> erase_flash
+
+if flash error
+sudo chmod -R 777 /dev/ttyUSB0
+
+git submodule deinit --force .
+git submodule init
+./tools/set-submodules-to-github.sh 
+git submodule update --recursive
+
+source venv/bin/activate
+python main.py
+
+sudo apt-get update       
+sudo apt-get install python3-tk  // tkinter module, which is used for creating graphical user interfaces (GUIs) in Python
+python3 main.py
+
+
+/******* Python Commands ******/
+python3			Launch Python 3 interactive shell
+python3 script.py	Run a Python script
+python3 --version	Check installed Python version
+which python3		Show the path to Python executable
+
+python3 -c "print('Hello, World!')"	Run inline Python code
+python3 -m timeit "x = sum(range(100))"	Benchmark a small Python snippet
+
+pip3 install <package>			Install a package
+pip3 install --upgrade <package>	Upgrade a package
+pip3 uninstall <package>		Uninstall a package
+pip3 list				List installed packages
+pip3 freeze > requirements.txt		Export installed packages to file
+pip3 install -r requirements.txt	Install packages from file
+
+/******* Linux Commands ******/
+// File and Directory Management
+ls		List files and directories
+cd		Change directory
+pwd		Print current directory path
+mkdir		Create new directory
+rm		Remove files or directories
+cp		Copy files or directories
+mv		Move or rename files or directories
+touch		Create an empty file
+find		Search for files in a directory hierarchy
+tree		Show directory structure in tree format (may need to install)
+
+// Viewing and Editing Files
+cat		View contents of a file
+more, less	View file contents page-by-page
+head		View the beginning of a file
+tail		View the end of a file (e.g. logs)
+nano, vi, vim	Text editors inside terminal
+grep		Search for a string in files
+
+// File Permissions and Ownership
+chmod		Change file permissions
+chown		Change file ownership
+ls -l		List files with permissions and ownership details
+
+// System Information
+uname -a	Show system info
+top		Show running processes (interactive)
+htop		Better version of top (may need to install)
+df -h		Show disk usage
+du -sh		Show directory size
+free -h		Show memory usage
+uptime		Show how long the system has been running
+whoami		Current user name
+hostname	Show system hostname
+
+// Package Management (Ubuntu/Debian)
+sudo apt update			Update package list
+sudo apt upgrade		Upgrade all packages
+sudo apt install <package>	Install a package
+sudo apt remove <package>	Remove a package
+
+// Networking
+ping <host>		Check network connectivity
+ifconfig or ip a	Show IP address (modern: ip a)
+netstat -tulnp		Show open ports and services (use ss for modern systems)
+curl <url>		Fetch content from a URL
+wget <url>		Download files from a URL
+
+// Process Management
+ps aux			Show all running processes
+kill <PID>		Kill a process by PID
+killall <process_name>	Kill by name

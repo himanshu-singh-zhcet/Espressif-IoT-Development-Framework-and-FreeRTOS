@@ -62,8 +62,6 @@ void setup(){
             1,              // Task priority
             NULL,           // Task handle
             app_cpu);       // Run on one core for demo purposes (ESP32 only)
-            
-
 }
 
 void loop(){

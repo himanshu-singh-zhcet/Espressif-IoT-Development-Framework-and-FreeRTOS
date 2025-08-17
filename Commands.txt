@@ -15,6 +15,9 @@ idf.py add-dependency espressif/expat
 esptool.py read_mac
 esptool.py --chip esp32 -p <USB-to-Serial Port> erase_flash
 
+esptool.py --chip esp32s3 merge_bin -o uc_lock.bin --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build/bootloader/bootloader.bin 0x14000 build/partition_table/partition-table.bin 0x1b000 build/ota_data_initial.bin 0x20000 build/doorbell.bin
+
+esptool.py --chip esp32c3 merge_bin -o bluestar_ac.bin --flash_mode dio --flash_size 4MB --flash_freq 80m 0x0 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x1e000 build/ota_data_initial.bin 0x30000 build/bluestar_ac.bin
 if flash error
 sudo chmod -R 777 /dev/ttyUSB0
 
@@ -32,20 +35,28 @@ python3 main.py
 
 
 /******* Python Commands ******/
+// Basic Python Commands in Terminal
 python3			Launch Python 3 interactive shell
 python3 script.py	Run a Python script
 python3 --version	Check installed Python version
 which python3		Show the path to Python executable
 
+// Running One-Liners
 python3 -c "print('Hello, World!')"	Run inline Python code
 python3 -m timeit "x = sum(range(100))"	Benchmark a small Python snippet
 
+// Python Package Management with pip
 pip3 install <package>			Install a package
 pip3 install --upgrade <package>	Upgrade a package
 pip3 uninstall <package>		Uninstall a package
 pip3 list				List installed packages
 pip3 freeze > requirements.txt		Export installed packages to file
 pip3 install -r requirements.txt	Install packages from file
+
+// Using Python Virtual Environments
+python3 -m venv myenv		Create a virtual environment
+source myenv/bin/activate	Activate the virtual environment
+deactivate			Exit the virtual environment
 
 /******* Linux Commands ******/
 // File and Directory Management

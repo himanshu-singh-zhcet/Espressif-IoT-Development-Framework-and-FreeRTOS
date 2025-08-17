@@ -51,12 +51,6 @@ void init_can(void){
     }
 }
 
-#include <string.h>
-#include "driver/twai.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_log.h"
-
 void can_task(void *arg) {
     twai_message_t rx_msg;
     uint8_t count = 0;
